@@ -137,6 +137,17 @@ afterEvaluate { project ->
         include '**/*.java'
     }
 
+    // task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
+    //     classifier = 'javadoc'
+    //     from androidJavadoc.destinationDir
+    // }
+
+    // task androidSourcesJar(type: Jar) {
+    //     classifier = 'sources'
+    //     from android.sourceSets.main.java.srcDirs
+    //     include '**/*.java'
+    // }
+
     task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
         archiveClassifier = 'javadoc'
         from androidJavadoc.destinationDir
